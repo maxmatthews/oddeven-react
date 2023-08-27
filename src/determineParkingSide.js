@@ -25,7 +25,6 @@ export const determineParkingSide = () => {
 
 export const calculateSwitchTime = () => {
 	const today = new Date();
-	today.setDate(31);
 
 	const tomorrow = new Date();
 	tomorrow.setDate(today.getDate() + 1);
