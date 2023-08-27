@@ -16,6 +16,10 @@ h3 {
 h1 {
 	font-size: 8.5em;
 	color: white;
+
+	@media (width < 500px) {
+		font-size: 6em;
+	}
 }
 
 h2 {
