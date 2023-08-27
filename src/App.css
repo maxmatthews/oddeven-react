@@ -1,38 +1,53 @@
+h1,
+p {
+	margin: 0;
+}
+
 .App {
-  text-align: center;
+	padding: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1,
+h2,
+h3 {
+	font-family: "Rubik Mono One", sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h1 {
+	font-size: 8.5em;
+	color: white;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+h2 {
+	font-size: 2.25em;
+	margin: 0;
 }
 
-.App-link {
-  color: #61dafb;
+h3 {
+	font-size: 2em;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.oddeven-about {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, 320px);
+	gap: 2rem;
+
+	@media (width < 500px) {
+		grid-template-columns: auto;
+	}
+}
+
+.oddeven-footer .oddeven-paragraph {
+	@media (width < 500px) {
+		font-size: 1rem;
+	}
+}
+
+h4,
+p {
+	font-family: "Rubik", sans-serif;
+}
+
+p {
+	font-size: 20px;
 }
