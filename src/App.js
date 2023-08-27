@@ -34,7 +34,7 @@ function App() {
 			<h2>{new Date().getHours() < 18 ? "Before" : "After"} 6 pm</h2>
 			<h2>
 				On{" "}
-				{switchTime.toLocaleDateString("default", {
+				{new Date().toLocaleDateString("default", {
 					month: "long",
 					day: "numeric",
 				})}
