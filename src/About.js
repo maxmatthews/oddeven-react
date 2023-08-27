@@ -29,11 +29,12 @@ const About = ({ isEven }) => (
 			<footer className="oddeven-footer">
 				<p className="oddeven-paragraph">
 					This website is unofficial and not related in any manner to the city
-					government of Syracuse, NY. If you find something wrong or have a
-					suggestion, email{" "}
-					<a href="mailto:info@oddeven.org">info@oddeven.org</a> or do a pull
-					request on{" "}
-					<a href="https://github.com/philipbordallo/oddeven">GitHub</a>.
+					government of Syracuse, NY. There is no guarantee of accuracy because
+					date math is hard. Original credit goes to{" "}
+					<a href={"https://github.com/philipbordallo/oddeven"}>
+						philipbordallo/oddeven
+					</a>
+					.
 				</p>
 			</footer>
 		</div>
