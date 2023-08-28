@@ -1,4 +1,4 @@
-const About = ({ isEven }) => (
+const About = ({ isEven, foolsDay }) => (
 	<>
 		<h2 style={{ fontSize: 20, marginTop: 50, marginBottom: 10 }}>About</h2>
 		<div className="oddeven-about">
@@ -26,6 +26,16 @@ const About = ({ isEven }) => (
 				</a>
 				.
 			</p>
+			{foolsDay && (
+				<p className="oddeven-paragraph">
+					What's a fools day? There are some exceptions to this rule, sometimes
+					referred to as "fool's days". These are instances at the end of some
+					months in which an odd day is immediately followed by another odd day.
+					Throughout the year, these fool's days fall on January 1, February 1,
+					April 1, June 1, August 1, September 1, and November 1. On leap years,
+					March 1 is also a fool's day.
+				</p>
+			)}
 			<footer className="oddeven-footer">
 				<p className="oddeven-paragraph">
 					This website is unofficial and not related in any manner to the city

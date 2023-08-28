@@ -1,4 +1,4 @@
-const isOddDay = (date) => date.getDate() % 2 === 1;
+export const isOddDay = (date) => date.getDate() % 2 === 1;
 
 export const determineParkingSide = () => {
 	const today = new Date();
@@ -56,4 +56,11 @@ export const calculateSwitchTime = () => {
 	}
 
 	return switchTime;
+};
+
+export const isFoolsDay = () => {
+	const tomorrow = new Date();
+	tomorrow.setDate(tomorrow.getDate() + 1);
+
+	return isOddDay(new Date()) && isOddDay(tomorrow);
 };
