@@ -5,8 +5,8 @@ const About = ({ isEven }) => (
 			<p className="oddeven-paragraph">
 				A simple website to help you better understand which side of the street
 				to be parked on in Syracuse, NY. The{" "}
-				<a href="http://www.syrgov.net/">city of Syracuse</a> uses odd even
-				parking, or{" "}
+				<a href="https://syr.gov/">city of Syracuse</a> uses odd even parking,
+				or{" "}
 				<a href="https://en.wikipedia.org/wiki/Alternate-side_parking">
 					alternative-side parking
 				</a>
@@ -21,7 +21,7 @@ const About = ({ isEven }) => (
 					{isEven ? "1024, 312, or 658" : "1023, 313, or 657"}
 				</span>
 				. For more information, visit{" "}
-				<a href="http://www.syrgov.net/Parking_FAQs.aspx">
+				<a href="https://www.syr.gov/Departments/PVB/Parking-Rules">
 					Syracuse's Parking FAQ
 				</a>
 				.
