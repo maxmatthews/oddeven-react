@@ -30,7 +30,9 @@ const About = ({ isEven }) => (
 				<p className="oddeven-paragraph">
 					This website is unofficial and not related in any manner to the city
 					government of Syracuse, NY. There is no guarantee of accuracy because
-					date math is hard. Original credit goes to{" "}
+					date math is hard. Current repo available on{" "}
+					<a href={"https://github.com/maxmatthews/oddeven-react"}>GitHub</a>.
+					Original credit goes to{" "}
 					<a href={"https://github.com/philipbordallo/oddeven"}>
 						philipbordallo/oddeven
 					</a>
