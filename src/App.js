@@ -26,7 +26,6 @@ function App() {
 			className="App"
 			style={{
 				backgroundColor: isEven ? "#3369ff" : "#f75231",
-				minHeight: "100vh",
 			}}
 		>
 			<p style={{ color: "white" }}>side</p>
