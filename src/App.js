@@ -4,7 +4,6 @@ import {
 	calculateSwitchTime,
 	determineParkingSide,
 	isFoolsDay,
-	isOddDay,
 } from "./determineParkingSide";
 import About from "./About";
 
