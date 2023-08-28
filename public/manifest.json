@@ -1,6 +1,7 @@
 {
 	"short_name": "Odd/Even Parking",
-	"name": "Determine which side of the street you should park on. ",
+	"name": "Odd/Even Parking",
+	"description": "Built for Syracuse, NY to help you figure out what side of the street to park on: odd or even.",
 	"icons": [
 		{
 			"src": "favicon.ico",
