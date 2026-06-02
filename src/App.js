@@ -7,19 +7,33 @@ import {
 } from "./determineParkingSide";
 import About from "./About";
 
+const SHUTDOWN_DATE = new Date("2026-08-27T00:00:00");
+
 function App() {
 	const [isEven, setIsEven] = useState(determineParkingSide());
 	const [switchTime, setSwitchTime] = useState(calculateSwitchTime());
 	const [foolsDay, setFoolsDay] = useState(isFoolsDay());
+	const [now, setNow] = useState(new Date());
 
 	const minutesToSwitch = Math.round((switchTime - new Date()) / 1000 / 60);
 	const hoursToSwitch = Math.floor(minutesToSwitch / 60);
+
+	const msToShutdown = SHUTDOWN_DATE - now;
+	const shutdownDays = Math.floor(msToShutdown / (1000 * 60 * 60 * 24));
+	const shutdownHours = Math.floor(
+		(msToShutdown % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60),
+	);
+	const shutdownMinutes = Math.floor(
+		(msToShutdown % (1000 * 60 * 60)) / (1000 * 60),
+	);
+	const isShutdown = msToShutdown <= 0;
 
 	useEffect(() => {
 		const interval = setInterval(() => {
 			setIsEven(determineParkingSide());
 			setSwitchTime(calculateSwitchTime());
 			setFoolsDay(isFoolsDay());
+			setNow(new Date());
 		}, 30000);
 		return () => clearInterval(interval);
 	}, []);
@@ -31,6 +45,23 @@ function App() {
 				backgroundColor: isEven ? "#3369ff" : "#f75231",
 			}}
 		>
+			<div className="shutdown-banner">
+				{isShutdown ? (
+					<>
+						<strong>This site has shut down.</strong> Please use{" "}
+						<a href="https://oddeven.org">oddeven.org</a> and update your
+						bookmark.
+					</>
+				) : (
+					<>
+						<strong>Heads up:</strong> this site shuts down on{" "}
+						<strong>August 27, 2026</strong> (in {shutdownDays}d {shutdownHours}h{" "}
+						{shutdownMinutes}m). Please switch to{" "}
+						<a href="https://oddeven.org">oddeven.org</a> and update your
+						bookmark.
+					</>
+				)}
+			</div>
 			<p style={{ color: "white" }}>side</p>
 			{isEven ? <h1>Even</h1> : <h1>Odd</h1>}
 			<h2>{new Date().getHours() < 18 ? "Before" : "After"} 6 pm</h2>
